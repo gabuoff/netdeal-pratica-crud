@@ -36,3 +36,7 @@ O sistema permite o cadastro, atualização, leitura e deleção (CRUD) de colab
 4. Execute o backend usando Spring Boot.
 5. Execute o frontend usando o servidor web integrado do AngularJS ou seu servidor web de preferência.
 6. Acesse o aplicativo através do navegador no endereço configurado.
+
+## Licença
+
+Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
