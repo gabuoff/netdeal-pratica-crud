@@ -4,6 +4,9 @@
 
 Bem vindo ao backend, uma aplicação construída usando Spring Boot e MongoDB. A aplicação segue a arquitetura Clean Architecture, que promove a separação de responsabilidades e a independência das camadas, facilitando a manutenção e evolução do sistema.
 
+### Aviso
+Se a rota do navegador estiver diferente de `http://localhost:8080`, a aplicação bloqueara, caso esteja com problema sera necessario mudar `.allowedOrigins("http://localhost:8000")` na Classe `WebConfig` em `package com.netdeal.br.config` do backend
+
 A arquitetura é organizada em camadas com os seguintes pacotes:
 ## Pré-requisitos
 
@@ -17,9 +20,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 
 É possivel acessar via docker mas talvez seja necessario mexer no application.properties
 
-##Aviso
 
-Se a rota do navegador estiver diferente de `http://localhost:8080`, a aplicação bloqueara, caso esteja com problema sera necessario mudar `.allowedOrigins("http://localhost:8000")` na Classe `WebConfig` em `package com.netdeal.br.config` do backend
 
 ## Configuração do Banco de Dados
 
