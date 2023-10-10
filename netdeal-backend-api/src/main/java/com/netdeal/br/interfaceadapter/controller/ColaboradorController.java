@@ -12,21 +12,20 @@ import com.netdeal.br.domain.dto.RegistrationRequest;
 import com.netdeal.br.domain.model.Colaborador;
 
 @RestController
-@RequestMapping("/colaboradores")
+@RequestMapping("api/colaborador")
 public class ColaboradorController {
 
     @Autowired
     ColaboradorService colaboradorService;
 
-    @PostMapping("/criar")
-    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("")
     public ResponseEntity<Object> criarColaborador(@RequestBody RegistrationRequest reg) {
         Colaborador colaborador = ColaboradorMapper.mapper(reg);
         colaboradorService.salvarColaborador(colaborador);
         return new ResponseEntity<>(AppMessages.REGISTER_SUCCESS, HttpStatus.CREATED);
     }
 
-    @GetMapping("/buscar-todos")
+    @GetMapping("/findAll")
     @ResponseStatus(HttpStatus.OK)
     public Iterable<Colaborador> buscarTodos() {
         return colaboradorService.buscarTodos();

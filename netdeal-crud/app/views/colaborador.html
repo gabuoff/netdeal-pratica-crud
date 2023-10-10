@@ -1,0 +1,27 @@
+<div ng-controller="ColaboradorController">
+    <form ng-submit="saveColaborador()">
+        Nome: <input type="text" ng-model="colaborador.nome">
+        Senha: <input type="password" ng-model="colaborador.senha">
+        Cargo: <select ng-model="colaborador.cargo" ng-options="h.cargo for h in hierarquias"></select>
+        <button type="submit">Salvar Colaborador</button>
+    </form>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Senha</th>
+                    <th>Cargo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in colaboradores">
+                    <td>{{ c.nome }}</td>
+                    <td>{{ c.senha }}</td>
+                    <td>{{ c.cargo }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

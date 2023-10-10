@@ -11,19 +11,19 @@ import com.netdeal.br.domain.dto.RegisterHierarquia;
 import com.netdeal.br.domain.model.Hierarquia;
 
 @RestController
-@RequestMapping("/hierarquia")
+@RequestMapping("api/hierarquia")
 public class HierarquiaController {
 
     @Autowired
     HierarquiaService hierarquiaService;
 
-    @PostMapping("/criar")
+    @PostMapping("")
     public ResponseEntity<Object> criarColaborador(@RequestBody RegisterHierarquia reg) {
         hierarquiaService.salvarHierarquia(reg);
         return new ResponseEntity<>(AppMessages.REGISTER_SUCCESS, HttpStatus.CREATED);
     }
 
-    @GetMapping("/buscar-todos")
+    @GetMapping("/findAll")
     @ResponseStatus(HttpStatus.OK)
     public Iterable<Hierarquia> buscarTodos() {
         return hierarquiaService.buscarTodos();
