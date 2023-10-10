@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.netdeal.br.businessrule.message.AppMessages;
 import com.netdeal.br.businessrule.usecase.HierarquiaService;
-import com.netdeal.br.domain.dto.RegisterHierarquia;
+import com.netdeal.br.domain.entities.RegisterHierarquia;
+import com.netdeal.br.domain.entities.ResponseData;
 import com.netdeal.br.domain.model.Hierarquia;
 
 @RestController
@@ -20,7 +21,7 @@ public class HierarquiaController {
     @PostMapping("")
     public ResponseEntity<Object> criarColaborador(@RequestBody RegisterHierarquia reg) {
         hierarquiaService.salvarHierarquia(reg);
-        return new ResponseEntity<>(AppMessages.REGISTER_SUCCESS, HttpStatus.CREATED);
+        return new ResponseEntity<>(new ResponseData(AppMessages.REGISTER_SUCCESS), HttpStatus.CREATED);
     }
 
     @GetMapping("/findAll")

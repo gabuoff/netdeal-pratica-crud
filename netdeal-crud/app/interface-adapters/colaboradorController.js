@@ -1,4 +1,4 @@
-app.controller('ColaboradorController', function($scope, ColaboradorService, HierarquiaService) {
+app.controller('ColaboradorController', function($scope, ColaboradorService, HierarquiaService, $timeout) {
     $scope.colaboradores = [];
     $scope.hierarquias = [];
     $scope.colaborador = {};
@@ -16,16 +16,27 @@ app.controller('ColaboradorController', function($scope, ColaboradorService, Hie
             $scope.colaborador = {};
             ColaboradorService.findAll().then(function(data) {
                 $scope.colaboradores = data;
-            }).catch(function(error) {
-               // Em caso de erro:
-            $('#errorModal').modal('show');  // Exibe o modal
 
-            // Oculta o modal após 1,5 segundos
+                // Sucesso ao salvar:
+                $('#successModal').modal('show');
+                $timeout(function() {
+                    $('#successModal').modal('hide');
+                }, 1500);
+
+            }).catch(function(error) {
+                // Em caso de erro ao listar os colaboradores após salvar:
+                $('#errorModal').modal('show');
+                $timeout(function() {
+                    $('#errorModal').modal('hide');
+                }, 1500);  
+            });
+
+        }).catch(function(error) {
+            // Erro ao salvar o colaborador:
+            $('#errorModal').modal('show');
             $timeout(function() {
                 $('#errorModal').modal('hide');
-            }, 1500);  
-            });
+            }, 1500);
         });
     };
 });
-

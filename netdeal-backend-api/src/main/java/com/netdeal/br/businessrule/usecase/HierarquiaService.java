@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.netdeal.br.businessrule.exception.ValidationException;
 import com.netdeal.br.businessrule.mapper.HierarquiaMapper;
 import com.netdeal.br.businessrule.validator.Validator;
-import com.netdeal.br.domain.dto.RegisterHierarquia;
+import com.netdeal.br.domain.entities.RegisterHierarquia;
 import com.netdeal.br.domain.model.Hierarquia;
 import com.netdeal.br.interfaceadapter.repository.HierarquiaRepository;
 
@@ -26,7 +26,7 @@ public class HierarquiaService {
     @Transactional
     public void salvarHierarquia(RegisterHierarquia reg) {
         try {
-            validator.validateHierarquia(reg.cargo(),reg.hierarquia());
+            validator.validateHierarquia(reg.cargo(), Integer.valueOf(reg.hierarquia()));
             Hierarquia hierarquia = HierarquiaMapper.mapper(reg);
             repository.save(hierarquia);
 

@@ -1,6 +1,6 @@
 package com.netdeal.br.businessrule.usecase;
 
-import com.netdeal.br.domain.dto.RegisterHierarquia;
+import com.netdeal.br.domain.entities.RegisterHierarquia;
 import com.netdeal.br.domain.model.Hierarquia;
 import com.netdeal.br.interfaceadapter.repository.HierarquiaRepository;
 import com.netdeal.br.businessrule.validator.Validator;
@@ -34,8 +34,8 @@ public class HierarquiaServiceTest {
 
     @Test
     public void testSalvarHierarquia() {
-        RegisterHierarquia reg = new RegisterHierarquia("Gerente", 1);
-        Hierarquia hierarquia = Hierarquia.builder().cargo("Gerente").hierarquia(1).build();
+        RegisterHierarquia reg = new RegisterHierarquia("Gerente", String.valueOf(1));
+        Hierarquia hierarquia = Hierarquia.builder().cargo("Gerente").hierarquia("1").build();
 
         doNothing().when(validator).validateHierarquia(anyString(), anyInt());
         when(repository.save(any(Hierarquia.class))).thenReturn(hierarquia);

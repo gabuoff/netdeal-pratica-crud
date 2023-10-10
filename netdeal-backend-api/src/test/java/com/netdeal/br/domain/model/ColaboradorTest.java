@@ -13,7 +13,7 @@ public class ColaboradorTest {
         colaborador.setNome("John Doe");
         colaborador.setCargo("Gerente");
         colaborador.setSenha("password123");
-        colaborador.setHierarquia(1);
+        colaborador.setHierarquia("1");
         colaborador.setForcaDaSenha(80);
 
         assertEquals("123", colaborador.getId());
@@ -26,7 +26,7 @@ public class ColaboradorTest {
 
     @Test
     public void testAllArgsConstructor() {
-        Colaborador colaborador = new Colaborador("123", "John Doe", "Gerente", "password123", 1, 80);
+        Colaborador colaborador = new Colaborador("123", "John Doe", "Gerente", "password123", "1", 80);
 
         assertEquals("123", colaborador.getId());
         assertEquals("John Doe", colaborador.getNome());
@@ -38,9 +38,9 @@ public class ColaboradorTest {
 
     @Test
     public void testEqualsAndHashCode() {
-        Colaborador colaborador1 = new Colaborador("123", "John Doe", "Gerente", "password123", 1, 80);
-        Colaborador colaborador2 = new Colaborador("123", "John Doe", "Gerente", "password123", 1, 80);
-        Colaborador colaborador3 = new Colaborador("456", "Jane Doe", "Diretor", "password456", 2, 90);
+        Colaborador colaborador1 = new Colaborador("123", "John Doe", "Gerente", "password123", "1", 80);
+        Colaborador colaborador2 = new Colaborador("123", "John Doe", "Gerente", "password123", "1", 80);
+        Colaborador colaborador3 = new Colaborador("456", "Jane Doe", "Diretor", "password456", "2", 90);
 
         assertEquals(colaborador1, colaborador2);
         assertNotEquals(colaborador1, colaborador3);
@@ -55,7 +55,7 @@ public class ColaboradorTest {
                 .nome("John Doe")
                 .cargo("Gerente")
                 .senha("password123")
-                .hierarquia(1)
+                .hierarquia("1")
                 .forcaDaSenha(80)
                 .build();
 

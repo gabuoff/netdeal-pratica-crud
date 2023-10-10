@@ -1,13 +1,48 @@
 <div ng-controller="HierarquiaController">
+    
     <form ng-submit="saveHierarquia()">
         Cargo: <input type="text" ng-model="hierarquia.cargo">
-        Posição: <input type="number" min="1" max="10" ng-model="hierarquia.posicao">
+        Posição: <input type="number" min="1" max="10" ng-model="hierarquia.hierarquia">
         <button type="submit">Salvar Hierarquia</button>
     </form>
+    
 
-    <div class="hierarquia-list">
-        <ul>
-            <li ng-repeat="h in hierarquias">{{ h.cargo }} - {{ h.posicao }}</li>
-        </ul>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cargo</th>
+                    <th>Posição Hierarquica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="h in hierarquias">
+                    <td>{{ h.cargo }}</td>
+                    <td>{{ h.hierarquia }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          Ocorreu um erro!
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body bg-success text-white">
+                Registro salvo com sucesso!
+            </div>
+        </div>
     </div>
 </div>

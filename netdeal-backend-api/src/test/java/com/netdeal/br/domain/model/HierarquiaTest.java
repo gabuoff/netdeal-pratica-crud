@@ -11,7 +11,7 @@ public class HierarquiaTest {
         Hierarquia hierarquia = new Hierarquia();
         hierarquia.setId("123");
         hierarquia.setCargo("Gerente");
-        hierarquia.setHierarquia(1);
+        hierarquia.setHierarquia("1");
 
         assertEquals("123", hierarquia.getId());
         assertEquals("Gerente", hierarquia.getCargo());
@@ -20,7 +20,7 @@ public class HierarquiaTest {
 
     @Test
     public void testAllArgsConstructor() {
-        Hierarquia hierarquia = new Hierarquia("123", "Gerente", 1);
+        Hierarquia hierarquia = new Hierarquia("123", "Gerente", "1");
 
         assertEquals("123", hierarquia.getId());
         assertEquals("Gerente", hierarquia.getCargo());
@@ -29,9 +29,9 @@ public class HierarquiaTest {
 
     @Test
     public void testEqualsAndHashCode() {
-        Hierarquia hierarquia1 = new Hierarquia("123", "Gerente", 1);
-        Hierarquia hierarquia2 = new Hierarquia("123", "Gerente", 1);
-        Hierarquia hierarquia3 = new Hierarquia("456", "Diretor", 2);
+        Hierarquia hierarquia1 = new Hierarquia("123", "Gerente","1");
+        Hierarquia hierarquia2 = new Hierarquia("123", "Gerente", "1");
+        Hierarquia hierarquia3 = new Hierarquia("456", "Diretor", "2");
 
         assertEquals(hierarquia1, hierarquia2);
         assertNotEquals(hierarquia1, hierarquia3);
@@ -44,7 +44,7 @@ public class HierarquiaTest {
         Hierarquia hierarquia = Hierarquia.builder()
                 .id("123")
                 .cargo("Gerente")
-                .hierarquia(1)
+                .hierarquia("1")
                 .build();
 
         assertEquals("123", hierarquia.getId());

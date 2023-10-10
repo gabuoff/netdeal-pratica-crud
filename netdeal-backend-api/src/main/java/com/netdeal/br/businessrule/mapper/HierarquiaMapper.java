@@ -1,6 +1,6 @@
 package com.netdeal.br.businessrule.mapper;
 
-import com.netdeal.br.domain.dto.RegisterHierarquia;
+import com.netdeal.br.domain.entities.RegisterHierarquia;
 import com.netdeal.br.domain.model.Hierarquia;
 
 public class HierarquiaMapper {

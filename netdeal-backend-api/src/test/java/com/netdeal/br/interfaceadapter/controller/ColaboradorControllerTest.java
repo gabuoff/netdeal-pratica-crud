@@ -2,7 +2,7 @@ package com.netdeal.br.interfaceadapter.controller;
 
 import com.netdeal.br.businessrule.message.AppMessages;
 import com.netdeal.br.businessrule.usecase.ColaboradorService;
-import com.netdeal.br.domain.dto.RegistrationRequest;
+import com.netdeal.br.domain.entities.RegistrationRequest;
 import com.netdeal.br.domain.model.Colaborador;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

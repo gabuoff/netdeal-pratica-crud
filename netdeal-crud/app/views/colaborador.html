@@ -1,4 +1,5 @@
 <div ng-controller="ColaboradorController">
+
     <form ng-submit="saveColaborador()">
         Nome: <input type="text" ng-model="colaborador.nome">
         Senha: <input type="password" ng-model="colaborador.senha">
@@ -26,15 +27,27 @@
             </tbody>
         </table>
     </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          Ocorreu um erro!
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Ocorreu um erro!
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body bg-success text-white">
+                    Registro salvo com sucesso!
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

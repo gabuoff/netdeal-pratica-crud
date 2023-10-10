@@ -33,7 +33,7 @@ public class Colaborador {
     private String senha;
 
     @JsonProperty("hierarquia")
-    private Integer hierarquia;
+    private String hierarquia;
 
     @JsonProperty("forcaDaSenha")
     private int forcaDaSenha;

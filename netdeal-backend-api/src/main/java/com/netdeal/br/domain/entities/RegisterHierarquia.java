@@ -1,4 +1,4 @@
-package com.netdeal.br.domain.dto;
+package com.netdeal.br.domain.entities;
 
 import com.netdeal.br.businessrule.message.AppMessages;
 
@@ -14,7 +14,7 @@ public record RegisterHierarquia(
     @NotBlank(message = AppMessages.HIERARQUIA_INVALIDO)
     @Size(min = 1, max = 2, message = AppMessages.MAX_HIERARQUIA)
     @Pattern(regexp = "\\d+", message = AppMessages.ONLY_NUMBER)
-    Integer hierarquia
+    String hierarquia
 ) {
     
 }

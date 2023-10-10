@@ -2,7 +2,7 @@ package com.netdeal.br.interfaceadapter.controller;
 
 import com.netdeal.br.businessrule.message.AppMessages;
 import com.netdeal.br.businessrule.usecase.HierarquiaService;
-import com.netdeal.br.domain.dto.RegisterHierarquia;
+import com.netdeal.br.domain.entities.RegisterHierarquia;
 import com.netdeal.br.domain.model.Hierarquia;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

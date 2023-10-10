@@ -25,6 +25,6 @@ public class Hierarquia {
 
     private String cargo;
 
-    private Integer hierarquia;
+    private String hierarquia;
     
 }

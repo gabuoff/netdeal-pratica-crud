@@ -25,9 +25,6 @@
             'lib/angular/angular.js',
             'lib/angular-route/angular-route.js',
             'app.js',
-            'core/version/version.js',
-            'core/version/version-directive.js',
-            'core/version/interpolate-filter.js',
             'entities/colaborador.js',
             'entities/hierarquia.js',
             'usecases/colaboradorService.js',
@@ -35,7 +32,11 @@
             'interface-adapters/controllers/colaboradorController.js',
             'interface-adapters/controllers/hierarquiaController.js',
             'frameworks-and-drivers/http-services/colaboradorHttpService.js',
-            'frameworks-and-drivers/http-services/hierarquiaHttpService.js'
+            'frameworks-and-drivers/http-services/hierarquiaHttpService.js',
+            'core/version/version.js',
+            'core/version/version-directive.js',
+            'core/version/interpolate-filter.js'
+            
         ], function() {
             angular.bootstrap(document, ['ColaboradorApp']);
         });
@@ -46,7 +47,6 @@
 
 <body ng-cloak>
     <div ng-view></div>
-    <div>AngularJS seed app: v<span app-version></span></div>
 </body>
 
 </html>
