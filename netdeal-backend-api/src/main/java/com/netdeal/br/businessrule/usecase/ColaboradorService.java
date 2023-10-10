@@ -27,6 +27,7 @@ public class ColaboradorService {
 
     @Autowired
     HierarquiaRepository hierarquiaRepository;
+    
     @Transactional
     public void salvarColaborador(Colaborador colaborador) {
         try {

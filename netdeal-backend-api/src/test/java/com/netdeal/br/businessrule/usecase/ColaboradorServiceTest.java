@@ -2,7 +2,9 @@ package com.netdeal.br.businessrule.usecase;
 
 import com.netdeal.br.businessrule.validator.Validator;
 import com.netdeal.br.domain.model.Colaborador;
+import com.netdeal.br.domain.model.Hierarquia;
 import com.netdeal.br.interfaceadapter.repository.ColaboradorRepository;
+import com.netdeal.br.interfaceadapter.repository.HierarquiaRepository;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -29,6 +31,9 @@ public class ColaboradorServiceTest {
     private ColaboradorRepository repository;
 
     @Mock
+    private HierarquiaRepository hierarquiaRepository;
+
+    @Mock
     private Validator validator;
 
     @Mock
@@ -40,7 +45,7 @@ public class ColaboradorServiceTest {
         Colaborador colaborador = new Colaborador();
         // ... (set any necessary fields on colaborador)
         when(senhaService.evaluatePasswordStrength(anyString())).thenReturn(80);
-
+        when(hierarquiaRepository.findByCargo(colaborador.getCargo())).thenReturn(new Hierarquia("123","123","1413"));
         // Act
         colaboradorService.salvarColaborador(colaborador);
 

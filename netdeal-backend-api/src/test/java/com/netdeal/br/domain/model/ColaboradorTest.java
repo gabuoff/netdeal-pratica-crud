@@ -20,7 +20,7 @@ public class ColaboradorTest {
         assertEquals("John Doe", colaborador.getNome());
         assertEquals("Gerente", colaborador.getCargo());
         assertEquals("password123", colaborador.getSenha());
-        assertEquals(1, colaborador.getHierarquia());
+        assertEquals("1", colaborador.getHierarquia());
         assertEquals(80, colaborador.getForcaDaSenha());
     }
 
@@ -32,7 +32,7 @@ public class ColaboradorTest {
         assertEquals("John Doe", colaborador.getNome());
         assertEquals("Gerente", colaborador.getCargo());
         assertEquals("password123", colaborador.getSenha());
-        assertEquals(1, colaborador.getHierarquia());
+        assertEquals("1", colaborador.getHierarquia());
         assertEquals(80, colaborador.getForcaDaSenha());
     }
 
@@ -63,7 +63,7 @@ public class ColaboradorTest {
         assertEquals("John Doe", colaborador.getNome());
         assertEquals("Gerente", colaborador.getCargo());
         assertEquals("password123", colaborador.getSenha());
-        assertEquals(1, colaborador.getHierarquia());
+        assertEquals("1", colaborador.getHierarquia());
         assertEquals(80, colaborador.getForcaDaSenha());
     }
 

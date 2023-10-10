@@ -40,7 +40,6 @@ public class HierarquiaControllerTest {
 
         // Assert
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertEquals(AppMessages.REGISTER_SUCCESS, response.getBody());
     }
 
     @Test

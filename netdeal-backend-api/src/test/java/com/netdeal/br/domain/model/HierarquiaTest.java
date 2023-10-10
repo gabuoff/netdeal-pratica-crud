@@ -15,7 +15,7 @@ public class HierarquiaTest {
 
         assertEquals("123", hierarquia.getId());
         assertEquals("Gerente", hierarquia.getCargo());
-        assertEquals(1, hierarquia.getHierarquia());
+        assertEquals("1", hierarquia.getHierarquia());
     }
 
     @Test
@@ -24,7 +24,7 @@ public class HierarquiaTest {
 
         assertEquals("123", hierarquia.getId());
         assertEquals("Gerente", hierarquia.getCargo());
-        assertEquals(1, hierarquia.getHierarquia());
+        assertEquals("1", hierarquia.getHierarquia());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class HierarquiaTest {
 
         assertEquals("123", hierarquia.getId());
         assertEquals("Gerente", hierarquia.getCargo());
-        assertEquals(1, hierarquia.getHierarquia());
+        assertEquals("1", hierarquia.getHierarquia());
     }
 
 }

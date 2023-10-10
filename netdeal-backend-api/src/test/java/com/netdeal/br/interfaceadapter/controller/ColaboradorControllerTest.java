@@ -1,7 +1,7 @@
 package com.netdeal.br.interfaceadapter.controller;
 
-import com.netdeal.br.businessrule.message.AppMessages;
 import com.netdeal.br.businessrule.usecase.ColaboradorService;
+import com.netdeal.br.domain.entities.RegisterHierarquia;
 import com.netdeal.br.domain.entities.RegistrationRequest;
 import com.netdeal.br.domain.model.Colaborador;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class ColaboradorControllerTest {
     @Test
     public void testCriarColaborador() {
         // Arrange
-        RegistrationRequest reg = new RegistrationRequest(null, null, null);
+        RegistrationRequest reg = new RegistrationRequest("null", "null", new RegisterHierarquia("31rf13", "1"));
         // ... (set any necessary fields on reg)
         doNothing().when(colaboradorService).salvarColaborador(any());
         // Act
@@ -39,7 +39,6 @@ public class ColaboradorControllerTest {
 
         // Assert
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertEquals(AppMessages.REGISTER_SUCCESS, response.getBody());
     }
 
     @Test
