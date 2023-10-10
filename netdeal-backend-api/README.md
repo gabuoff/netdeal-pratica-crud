@@ -5,18 +5,6 @@
 Bem vindo ao backend, uma aplicação construída usando Spring Boot e MongoDB. A aplicação segue a arquitetura Clean Architecture, que promove a separação de responsabilidades e a independência das camadas, facilitando a manutenção e evolução do sistema.
 
 A arquitetura é organizada em camadas com os seguintes pacotes:
-
-![Alt text](docs/clean_architecture.png?raw=true "Clean Architecture Cone")
-
-- `businessrule`: Contém os casos de uso (use cases) e regras de negócio da aplicação. Inclui pacotes como `exception` para exceções personalizadas, `message` para serviços de mensagem específicos das regras de negócio, `usecase` para implementações de casos de uso e `validator` para validações personalizadas.
-
-- `domain`: Contém as entidades do domínio, que representam os objetos centrais da sua lógica de negócio.
-
-- `external`: Contém itens relacionados à parte mais externa da aplicação, como configurações gerais. Por exemplo, você pode ter um pacote `configuration` para configurações da aplicação.
-
-- `interfaceadapter`: Contém os itens relacionados ao acesso do usuário à aplicação. `repository` para acessar e obter dados do banco de dados
-
-
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
