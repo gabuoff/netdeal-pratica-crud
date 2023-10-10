@@ -47,6 +47,9 @@ public class SenhaService {
     }
 
     private int countMiddleNumbersOrSymbols(String password) {
+        if (password.length() < 3) {
+            return 0;  // Não há caracteres médios em uma senha de menos de 3 caracteres
+        }
         String middle = password.substring(1, password.length() - 1);
         return countMatches("\\d|\\W", middle);
     }
