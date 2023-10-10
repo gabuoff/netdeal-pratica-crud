@@ -11,6 +11,6 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'HierarquiaController'
         })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/colaborador'
         });
 }]);

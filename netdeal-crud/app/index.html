@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="ColaboradorApp" class="no-js">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="app.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="app.css">
-  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Colaborador NetDeal Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.min.js"></script>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+  </head>
 
 <div class="container">
-  <!-- Menu de Navegação -->
   <nav>
-      <a href="#!/colaborador">Colaboradores</a> | 
-      <a href="#!/hierarquia">Hierarquias</a>
+    <h2>Colaborador NetDeal</h2>
+    <ul>
+      <li><a href="#!/colaborador">Colaboradores</a></li>
+      <li><a href="#!/hierarquia">Hierarquias</a></li>
+    </ul>
   </nav>
 
   <!-- Conteúdo principal da aplicação -->
   <div ng-view></div>
 </div>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="core/version/version.js"></script>
-  <script src="core/version/version-directive.js"></script>
-  <script src="core/version/interpolate-filter.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+
+<script src="app.js"></script>
+<script src="core/version/version.js"></script>
+<script src="core/version/version-directive.js"></script>
+<script src="core/version/interpolate-filter.js"></script>
 
   <!-- Entities -->
   <script src="/entities/colaborador.js"></script>
   <script src="/entities/hierarquia.js"></script>
 
   <!-- Use Cases (ou Interactors) -->
-  <script src="/usecases/colaboradorService.js"></script>
-  <script src="/usecases/hierarquiaService.js"></script>
+  <script src="/usecases/colaborador.service.js"></script>
+  <script src="/usecases/hierarquia.service.js"></script>
 
   <!-- Interface Adapters -->
-  <script src="/interface-adapters/controllers/colaboradorController.js"></script>
-  <script src="/interface-adapters/controllers/hierarquiaController.js"></script>
+  <script src="/interface-adapters/colaboradorController.js"></script>
+  <script src="/interface-adapters/hierarquiaController.js"></script>
 
   <!-- Frameworks and Drivers -->
   <script src="/frameworks-and-drivers/http-services/colaboradorHttpService.js"></script>
   <script src="/frameworks-and-drivers/http-services/hierarquiaHttpService.js"></script>
 
-  <!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.min.js"></script>
 </body>
 
 </html>

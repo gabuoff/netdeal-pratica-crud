@@ -6,4 +6,5 @@ import com.netdeal.br.domain.model.Hierarquia;
 
 public interface HierarquiaRepository extends MongoRepository<Hierarquia, String> {
     boolean existsByCargo(String cargo);
+    Hierarquia findByCargo(String cargo);
 }

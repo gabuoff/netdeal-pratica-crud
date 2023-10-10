@@ -1,5 +1,5 @@
 app.service('ColaboradorHttpService', function($http) {
-    const baseUrl = '/api/colaborador';
+    const baseUrl = 'http://localhost:8080/api/colaborador';
 
     this.findAll = function() {
         return $http.get(`${baseUrl}/findAll`);

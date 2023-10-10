@@ -13,6 +13,7 @@
                     <th>Nome</th>
                     <th>Senha</th>
                     <th>Cargo</th>
+                    <th>Forca</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,8 +21,20 @@
                     <td>{{ c.nome }}</td>
                     <td>{{ c.senha }}</td>
                     <td>{{ c.cargo }}</td>
+                    <td>{{ c.forcaDaSenha }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          Ocorreu um erro!
+        </div>
+      </div>
+    </div>
+  </div>

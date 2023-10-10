@@ -11,7 +11,6 @@ public class ColaboradorMapper {
                                 .nome(reg.nome())
                                 .cargo(reg.cargo())
                                 .senha(reg.senha())
-                                .hierarquia(reg.hierarquia())
                                 .build();
         }
 }

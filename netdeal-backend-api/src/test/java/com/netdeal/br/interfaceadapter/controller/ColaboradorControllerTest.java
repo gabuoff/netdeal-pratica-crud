@@ -31,7 +31,7 @@ public class ColaboradorControllerTest {
     @Test
     public void testCriarColaborador() {
         // Arrange
-        RegistrationRequest reg = new RegistrationRequest(null, null, null, null);
+        RegistrationRequest reg = new RegistrationRequest(null, null, null);
         // ... (set any necessary fields on reg)
         doNothing().when(colaboradorService).salvarColaborador(any());
         // Act

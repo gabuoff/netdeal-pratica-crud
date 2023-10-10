@@ -12,8 +12,6 @@ public record RegistrationRequest(
     String cargo,
 
     @NotBlank(message = AppMessages.SENHA_INVALIDO)
-    String senha,
-
-    Integer hierarquia 
+    String senha
 ) {
 }

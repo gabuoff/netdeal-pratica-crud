@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import com.netdeal.br.businessrule.exception.ValidationException;
 import com.netdeal.br.businessrule.validator.Validator;
 import com.netdeal.br.domain.model.Colaborador;
+import com.netdeal.br.domain.model.Hierarquia;
 import com.netdeal.br.interfaceadapter.repository.ColaboradorRepository;
+import com.netdeal.br.interfaceadapter.repository.HierarquiaRepository;
 
 @Service
 public class ColaboradorService {
@@ -23,12 +25,16 @@ public class ColaboradorService {
     @Autowired
     private SenhaService senhaService;
 
+    @Autowired
+    HierarquiaRepository hierarquiaRepository;
     @Transactional
     public void salvarColaborador(Colaborador colaborador) {
         try {
             validator.validateContador(colaborador.getNome());
             int score = senhaService.evaluatePasswordStrength(colaborador.getSenha());
+            Hierarquia hierarquia = hierarquiaRepository.findByCargo(colaborador.getCargo());
             colaborador.setForcaDaSenha(score);
+            colaborador.setHierarquia(hierarquia.getHierarquia());
             repository.save(colaborador);
         } catch (ValidationException ve) {
             LOGGER.error("Erro de validação: ", ve);
