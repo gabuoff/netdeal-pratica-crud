@@ -26,7 +26,7 @@ public class HierarquiaService {
     @Transactional
     public void salvarHierarquia(RegisterHierarquia reg) {
         try {
-            validator.validateHierarquia(reg.cargo());
+            validator.validateHierarquia(reg.cargo(),reg.hierarquia());
             Hierarquia hierarquia = HierarquiaMapper.mapper(reg);
             repository.save(hierarquia);
 

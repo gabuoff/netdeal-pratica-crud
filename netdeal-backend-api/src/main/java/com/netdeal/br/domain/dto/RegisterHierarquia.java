@@ -12,8 +12,8 @@ public record RegisterHierarquia(
     String cargo,
     
     @NotBlank(message = AppMessages.HIERARQUIA_INVALIDO)
-    @Size(min = 1, max = 10, message = "Hierarquia deve ter entre 1 a 10 caracteres")
-    @Pattern(regexp = "\\d+", message = "Hierarquia deve ser um número")
+    @Size(min = 1, max = 2, message = AppMessages.MAX_HIERARQUIA)
+    @Pattern(regexp = "\\d+", message = AppMessages.ONLY_NUMBER)
     Integer hierarquia
 ) {
     

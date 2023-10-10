@@ -8,10 +8,10 @@ public record RegistrationRequest(
     @NotBlank(message = AppMessages.NOME_INVALIDO)  
     String nome,
 
-    @NotBlank(message = "Cargo não pode ser vazio")
+    @NotBlank(message = AppMessages.CARGO_INVALIDO)
     String cargo,
 
-    @NotBlank(message = "Senha não pode ser vazio")
+    @NotBlank(message = AppMessages.SENHA_INVALIDO)
     String senha,
 
     Integer hierarquia 

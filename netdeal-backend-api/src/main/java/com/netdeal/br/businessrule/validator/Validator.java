@@ -23,7 +23,10 @@ public class Validator {
         }
     }
 
-    public void validateHierarquia(String cargo) {
+    public void validateHierarquia(String cargo, Integer hierarquia) {
+        if(hierarquia == null || hierarquia <= 0 || hierarquia > 10){
+            throw new ValidationException(AppMessages.HIERARQUIA_INVALIDO);
+        }
         if(hierarquiaRepository.existsByCargo(cargo)){
             throw new ValidationException(AppMessages.COLABORADOR_CARGO_CADASTRADO);
         }

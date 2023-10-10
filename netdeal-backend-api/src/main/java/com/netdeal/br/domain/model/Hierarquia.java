@@ -16,7 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode(of = "id")
-@Document(collection = "colaborador")
+@Document(collection = "hierarquia")
 public class Hierarquia {
  
     
