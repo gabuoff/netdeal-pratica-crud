@@ -7,7 +7,6 @@ Bem vindo ao backend, uma aplicação construída usando Spring Boot e MongoDB. 
 ### Aviso
 Se a rota do navegador estiver diferente de `http://localhost:8080`, a aplicação bloqueara, caso esteja com problema sera necessario mudar `.allowedOrigins("http://localhost:8000")` na Classe `WebConfig` em `package com.netdeal.br.config` do backend
 
-A arquitetura é organizada em camadas com os seguintes pacotes:
 ## Pré-requisitos
 
 Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
