@@ -17,7 +17,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 
 É possivel acessar via docker mas talvez seja necessario mexer no application.properties
 
-###Aviso
+##Aviso
 
 Se a rota do navegador estiver diferente de `http://localhost:8080`, a aplicação bloqueara, caso esteja com problema sera necessario mudar `.allowedOrigins("http://localhost:8000")` na Classe `WebConfig` em `package com.netdeal.br.config` do backend
 
