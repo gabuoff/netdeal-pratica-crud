@@ -9,6 +9,7 @@ A arquitetura é organizada em camadas com os seguintes pacotes:
 
 Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
 
+
 - JDK 17 (Java Development Kit)
 - Maven 3.9.2
 - MongoDB
@@ -16,6 +17,9 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 
 É possivel acessar via docker mas talvez seja necessario mexer no application.properties
 
+###Aviso
+
+Se a rota do navegador estiver diferente de `http://localhost:8080`, a aplicação bloqueara, caso esteja com problema sera necessario mudar `.allowedOrigins("http://localhost:8000")` na Classe `WebConfig` em `package com.netdeal.br.config` do backend
 
 ## Configuração do Banco de Dados
 
@@ -29,10 +33,9 @@ Siga as etapas abaixo para executar a aplicação:
 2. Abra um terminal ou prompt de comando.
 3. Navegue até o diretório raiz do projeto.
 4. Execute o comando `mvn spring-boot:run` para iniciar a aplicação.
-
 A aplicação será iniciada e estará disponível em `http://localhost:8080`.
 
-## TDD - Test Driven Development
+## TDD - Test-Driven Development
 
 Para a vizualização de cobertura de testes foi utilizado o Jacoco, o arquivo é gerado no caminho target/site assim que usado o comando
 
@@ -43,6 +46,6 @@ Para a vizualização de cobertura de testes foi utilizado o Jacoco, o arquivo �
 
 ## Contato
 
-Se tiver alguma dúvida ou precisar de assistência adicional, entre em contato pelo e-mail gabrielmeloc@gmail.com.
+Se tiver alguma dúvida ou precisar de assistência adicional, entre em contato pelo e-mail gabrielmeloc@outlook.com.
 
 Espero que esta estrutura e o README atendam às suas necessidades! Se você tiver mais alguma dúvida ou precisar de mais informações, fique à vontade para perguntar.
